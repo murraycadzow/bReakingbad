@@ -45,7 +45,6 @@ three_dp <- function(num){
 #' @title
 #' format_p_md
 #'
-#' @import magrittr
 #' @param p numeric atom
 #' @param sci use scientific x10 format
 #' @param digits number of decimal places to display
