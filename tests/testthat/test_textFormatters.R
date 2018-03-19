@@ -1,4 +1,4 @@
-context("test_textformatters.R")
+context("test_textFormatters.R")
 
 test_that("Proper case formatter", {
   expect_equal(to_proper_case("Abc"), "Abc")
