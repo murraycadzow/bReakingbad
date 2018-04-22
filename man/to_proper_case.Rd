@@ -9,6 +9,9 @@ to_proper_case(x)
 \arguments{
 \item{x}{the string to be formatted}
 }
+\value{
+the string in proper case
+}
 \description{
-Converts 1st character of string to upper case and all other characters to lower case
+Converts 1st character of string to upper case and all other characters to lower case. Refer to https://stackoverflow.com/questions/24956546/capitalizing-letters-r-equivalent-of-excel-proper-function
 }

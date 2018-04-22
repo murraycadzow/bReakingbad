@@ -5,7 +5,7 @@
 #'
 #' @description
 #' create a string formatted to n decimal places
-#'
+#' @usage round_dp(num, dp)
 #' @param num a number
 #' @param dp a whole number >= 0
 #' @return character string version of the float to specified decimal places
@@ -32,6 +32,7 @@ round_dp <- function(num,dp){
 #'
 #' @param num a number to round
 #' @return number rounded to 3 decimal places
+#' @usage three_dp(num)
 #' @export
 #' @examples
 #' three_dp(0.123456)
@@ -50,13 +51,15 @@ three_dp <- function(num){
 #' @param sci use scientific x10 format
 #' @param digits number of decimal places to display
 #' @param sci_thres threshold below which to apply scientific format [0,1]
+#' @param format language used to do formatting ("html" or "latex")
+#' @usage format_p_md(p, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'html')
 #' @return character atom
 #' @export
 format_p_md <- function(p, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'html'){
   replace1 <- " x 10^"
   replace2 <- "^"
   if(format == 'latex'){
-    replace1 <- " x 10$^{"
+    replace1 <- " x 10\\\\textsuperscript{"
     replace2 <- "}$"
   }
   if(p < sci_thres && sci){

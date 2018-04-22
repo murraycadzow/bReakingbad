@@ -4,8 +4,7 @@
 \alias{format_p_md}
 \title{format_p_md}
 \usage{
-format_p_md(p, sci = TRUE, digits = 3, sci_thres = 0.001,
-  format = "html")
+format_p_md(p, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'html')
 }
 \arguments{
 \item{p}{numeric atom}
@@ -15,6 +14,8 @@ format_p_md(p, sci = TRUE, digits = 3, sci_thres = 0.001,
 \item{digits}{number of decimal places to display}
 
 \item{sci_thres}{threshold below which to apply scientific format [0,1]}
+
+\item{format}{language used to do formatting ("html" or "latex")}
 }
 \value{
 character atom
