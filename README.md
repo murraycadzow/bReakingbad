@@ -2,6 +2,7 @@
 
 <!-- badges: start -->
   [![Travis build status](https://travis-ci.org/murraycadzow/bReakingbad.svg?branch=master)](https://travis-ci.org/murraycadzow/bReakingbad)
+  [![Coverage Status](https://coveralls.io/repos/github/murraycadzow/bReakingbad/badge.svg?branch=master)](https://coveralls.io/github/murraycadzow/bReakingbad?branch=master)
   <!-- badges: end -->
 
 The goal of bReakingbad is to nicely format p-values based on a threshold to sciencific notation in a markdown table.
