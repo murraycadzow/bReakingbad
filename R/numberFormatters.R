@@ -47,12 +47,15 @@ three_dp <- function(num){
 #' format_p_md
 #' @details
 #' if format = "latex', use knitr::kable( format = 'latex', escape = FALSE)
+#'
 #' @param p numeric atom
 #' @param sci use scientific x10 format
 #' @param digits number of decimal places to display
 #' @param sci_thres threshold below which to apply scientific format [0,1]
 #' @param format language used to do formatting ("html" or "latex")
-#' @usage format_p_md(p, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'html')
+#'
+#' @examples
+#' format_p_md(p= 0.1234, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'html')
 #' @return character atom
 #' @export
 format_p_md <- function(p, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'html'){
@@ -64,10 +67,10 @@ format_p_md <- function(p, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'h
   }
   if(p < sci_thres && sci){
     sprintf(paste0("%.",digits,"e"), p) %>%
-      stringr::str_replace(., "e-0", "e-") %>%
-      stringr::str_replace(.,"e0", "e") %>%
-      stringr::str_replace(., pattern = "e", replacement = stringr::fixed(replace1)) %>%
-      paste0(.,replace2)
+      stringr::str_replace("e-0", "e-") %>%
+      stringr::str_replace("e0", "e") %>%
+      stringr::str_replace(pattern = "e", replacement = stringr::fixed(replace1)) %>%
+      paste0(.data,replace2)
   } else{
     sprintf(paste0("%.",digits,"f"), p)
   }
@@ -85,7 +88,9 @@ format_p_md <- function(p, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'h
 #' @param sci use scientific x10 format
 #' @param digits number of decimal places to display
 #' @param sci_thres threshold below which to apply scientific format [0,1]
+#' @param format language used to do formatting ("html" or "latex")
 #' @param ... parameters for kableExtra::cell_spec(). e.g. bold = TRUE
+#' @importFrom kableExtra cell_spec
 #' @return character atom
 #' @export
 #' @examples

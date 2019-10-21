@@ -4,7 +4,8 @@
 \alias{format_p_md}
 \title{format_p_md}
 \usage{
-format_p_md(p, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'html')
+format_p_md(p, sci = TRUE, digits = 3, sci_thres = 0.001,
+  format = "html")
 }
 \arguments{
 \item{p}{numeric atom}
@@ -20,6 +21,12 @@ format_p_md(p, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'html')
 \value{
 character atom
 }
+\description{
+format_p_md
+}
 \details{
 if format = "latex', use knitr::kable( format = 'latex', escape = FALSE)
+}
+\examples{
+format_p_md(p= 0.1234, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'html')
 }

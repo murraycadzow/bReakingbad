@@ -16,6 +16,8 @@ format_p_ke(p, sci = TRUE, digits = 3, sci_thres = 0.001,
 
 \item{sci_thres}{threshold below which to apply scientific format [0,1]}
 
+\item{format}{language used to do formatting ("html" or "latex")}
+
 \item{...}{parameters for kableExtra::cell_spec(). e.g. bold = TRUE}
 }
 \value{

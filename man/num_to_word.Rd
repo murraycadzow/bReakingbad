@@ -12,6 +12,9 @@ num_to_word(x)
 \value{
 a string
 }
+\description{
+num_to_words
+}
 \examples{
 num_to_word(3)
 }
