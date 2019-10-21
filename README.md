@@ -1,5 +1,9 @@
 # bReakingbad
 
+<!-- badges: start -->
+  [![Travis build status](https://travis-ci.org/murraycadzow/bReakingbad.svg?branch=master)](https://travis-ci.org/murraycadzow/bReakingbad)
+  <!-- badges: end -->
+
 The goal of bReakingbad is to ...
 
 ## Installation
@@ -7,7 +11,7 @@ The goal of bReakingbad is to ...
 You can install the released version of bReakingbad from [github](https://github.com/murraycadzow/bReakingbad/) with:
 
 ``` r
-devtools::install_devtools("murraycadzow/bReakingbad")
+devtools::install_github("murraycadzow/bReakingbad")
 ```
 
 ## Example
