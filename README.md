@@ -4,7 +4,7 @@
   [![Travis build status](https://travis-ci.org/murraycadzow/bReakingbad.svg?branch=master)](https://travis-ci.org/murraycadzow/bReakingbad)
   <!-- badges: end -->
 
-The goal of bReakingbad is to ...
+The goal of bReakingbad is to nicely format p-values based on a threshold to sciencific notation in a markdown table.
 
 ## Installation
 
