@@ -3,7 +3,6 @@
 \docType{package}
 \name{bReakingbad}
 \alias{bReakingbad}
-\alias{bReakingbad-package}
 \title{bReakingbad: a package for formatting of p-values in markdown tables}
 \description{
 The foo package provides three categories of important functions:

@@ -59,18 +59,20 @@ three_dp <- function(num){
 #' @return character atom
 #' @export
 format_p_md <- function(p, sci = TRUE, digits = 3, sci_thres = 1e-3, format = 'html'){
+  start_format <- ""
   replace1 <- " x 10^"
-  replace2 <- "^"
+  end_format <- "^"
   if(format == 'latex'){
+    start_format <- ""
     replace1 <- " x 10\\\\textsuperscript{"
-    replace2 <- "}$"
+    end_format <- "}"
   }
   if(p < sci_thres && sci){
-    sprintf(paste0("%.",digits,"e"), p) %>%
+    formatted <- sprintf(paste0("%.",digits,"e"), p) %>%
       stringr::str_replace("e-0", "e-") %>%
       stringr::str_replace("e0", "e") %>%
-      stringr::str_replace(pattern = "e", replacement = stringr::fixed(replace1)) %>%
-      paste0(.data,replace2)
+      stringr::str_replace(pattern = "e", replacement = stringr::fixed(replace1))
+    paste0(start_format, formatted, end_format)
   } else{
     sprintf(paste0("%.",digits,"f"), p)
   }

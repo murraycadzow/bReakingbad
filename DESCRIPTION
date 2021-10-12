@@ -9,7 +9,7 @@ LazyData: true
 ByteCompile: true
 Author: Murray Cadzow
 Maintainer: Murray Cadzow <murray.cadzow@otago.ac.nz>
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 Depends: dplyr, magrittr, kableExtra
 Suggests: 
     testthat,

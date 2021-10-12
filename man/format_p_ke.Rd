@@ -4,8 +4,7 @@
 \alias{format_p_ke}
 \title{format_p_ke}
 \usage{
-format_p_ke(p, sci = TRUE, digits = 3, sci_thres = 0.001,
-  format = "html", ...)
+format_p_ke(p, sci = TRUE, digits = 3, sci_thres = 0.001, format = "html", ...)
 }
 \arguments{
 \item{p}{numeric atom}
